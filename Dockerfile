@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 80
 
-CMD ["node", "app.js"]docker build -t my-node-app .
+CMD ["node", "app.js"]
