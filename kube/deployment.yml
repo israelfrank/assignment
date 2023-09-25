@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: counter-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: counter-service
+  template:
+    metadata:
+      labels:
+        app: counter-service
+    spec:
+      containers:
+        - name: counter-service
+          image: israelfrank/my-node-app:latest
+          ports:
+            - containerPort: 80
