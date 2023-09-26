@@ -25,11 +25,11 @@ pipeline {
             steps {
                 // Update the Docker Compose file for Docker Swarm
                 script {
-                    sh "sed -i 's|image: israelfrank/counter-service:.*|image: israelfrank/counter-service:${imageName}|' docker-compose.yml" // Update image tag in the Docker Compose file
+                    sh "sed -i 's|image: israelfrank/counter-service:.*|image: ${imageName}|' docker-compose.yml" // Update image tag in the Docker Compose file
                     sh "docker stack deploy -c docker-compose.yml ${STACK_NAME}"
                 }
             }
-            
+
             post {
                 success {
                     // If deployment is successful, update the repository with the new Docker image tag
