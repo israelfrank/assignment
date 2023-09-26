@@ -32,16 +32,6 @@ pipeline {
                     sh "docker stack deploy -c docker-compose.yml ${STACK_NAME}"
                 }
             }
-
-            post {
-                success {
-                    // If deployment is successful, update the repository with the new Docker image tag
-                    script {
-                        sh 'chmod +x update-git.sh'
-                        sh './update-git.sh'
-                    }
-                }
-            }
         }    
     } 
 }
