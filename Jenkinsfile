@@ -2,7 +2,7 @@ def imageName
 pipeline {
     agent any
     environment {
-        BRANCH_NAME = params.BRANCH_NAME
+        BRANCH_NAME = "${params.BRANCH_NAME}"
         DOCKER_REGISTRY = 'docker.io'
         STACK_NAME = 'my-app-stack_counter-service'
     }
