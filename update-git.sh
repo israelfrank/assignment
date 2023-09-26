@@ -6,7 +6,8 @@ git config --global user.name "israelfrank"
 
 # Get the current branch
 current_branch=$(git rev-parse --abbrev-ref HEAD)
-
+echo $current_branch
+echo $BRANCH_NAME
 # Check if the current branch is not the same as the target branch
 if [ "$current_branch" != "$BRANCH_NAME" ]; then
   git checkout "$BRANCH_NAME" 
