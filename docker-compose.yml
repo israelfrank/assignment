@@ -1,0 +1,8 @@
+version: '3'
+services:
+  counter-service:
+    image: israelfrank/counter-service:{{BRANCH_NAME}}
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 1
