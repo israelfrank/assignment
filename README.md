@@ -1,6 +1,6 @@
 # assignment
 
-1. I have installed Jenkins within a Docker container on an Amazon EC2 instance, and I've configured it to run on port 443.
+1. I have installed Jenkins on an Amazon EC2 instance, and I've configured it to run on port 443.
 
 2. I have developed an application that counts HTTP POST requests. To deploy this application consistently and reliably, I've created a Dockerfile to package the application into a container. Additionally, I've defined a `docker-compose.yml` file to deploy the app with Docker Swarm, ensuring the stability of my application.
 
