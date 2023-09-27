@@ -29,6 +29,7 @@ pipeline {
                        sed -i 's|image: israelfrank/counter-service:.*|image: ${imageName}|' docker-compose.yml
                     """
                     sh 'cat docker-compose.yml'
+                    sh 'docker swarm init'
                     sh "docker stack deploy -c docker-compose.yml ${STACK_NAME}"
                 }
             }
